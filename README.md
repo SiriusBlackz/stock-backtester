@@ -4,7 +4,7 @@ A Python backtester that simulates a moving average crossover trading strategy o
 
 ## Features
 
-- Fetches 1 year of historical daily data using yfinance
+- Fetches 3 years of historical daily data using yfinance
 - Implements a simple moving average (SMA) crossover strategy
 - Simulates trades with configurable initial capital
 - Compares strategy performance against buy-and-hold benchmark

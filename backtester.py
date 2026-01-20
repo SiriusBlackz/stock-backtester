@@ -13,7 +13,7 @@ import pandas as pd
 import yfinance as yf
 
 
-def fetch_data(ticker: str, period: str = "1y") -> pd.DataFrame:
+def fetch_data(ticker: str, period: str = "3y") -> pd.DataFrame:
     """Fetch historical daily data for a given ticker."""
     stock = yf.Ticker(ticker)
     df = stock.history(period=period)
@@ -275,7 +275,7 @@ def print_summary(ticker: str, metrics: dict, results: dict, buy_hold: dict, sho
 def run_backtest(ticker: str = "AAPL", short_window: int = 20, long_window: int = 50,
                  initial_capital: float = 10000.0):
     """Run the complete backtest pipeline."""
-    print(f"\nFetching 1 year of data for {ticker}...")
+    print(f"\nFetching 3 years of data for {ticker}...")
     df = fetch_data(ticker)
     print(f"Retrieved {len(df)} trading days of data.")
 
